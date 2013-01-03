@@ -37,6 +37,7 @@ module Basil
                   debug "private chat: #{is_private}"
 
                   to  = Config.me if !to && is_private
+                  debug "To = #{to}; from = #{from}, from_name = #{from_name}"
                   msg = Message.new(to, from, from_name, text, chat.chatname)
 
                   if reply = dispatch_message(msg)
@@ -52,6 +53,7 @@ module Basil
       end
 
       Rype.attach
+      info "Attached to skype server"
       Rype.thread.join
     end
 

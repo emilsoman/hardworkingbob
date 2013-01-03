@@ -51,7 +51,7 @@ module Basil
       # returned will be handed to the server's broadcast_mail method.
       def check
         # if the server doesn't support us, we just do nothing.
-        return unless Config.server.respond_to?(:broadcast_message)
+        return unless Config.server.respond_to?(:broadcast_mail)
 
         info "starting email checker loop"
 

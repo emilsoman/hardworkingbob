@@ -1,5 +1,4 @@
 pkg
 doc
 coverage
-config/basil.yml
 *.pstore
