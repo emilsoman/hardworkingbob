@@ -1,7 +1,7 @@
 require 'forwardable'
 require 'logger'
 
-module Basil
+module HardworkingBob
   module Logging
     LOG_METHODS = [ :fatal, :error, :warn, :info, :debug ]
 

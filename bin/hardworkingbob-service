@@ -1,20 +1,20 @@
 #!/bin/bash
 #
-# runs the basil binary as a service. redirects all output to a log file
+# runs the hardworkingbob binary as a service. redirects all output to a log file
 # and creates a pid-file.
 #
 ###
-logfile='./tmp/basil.log'
-pidfile='./tmp/basil.pid'
+logfile='./tmp/hardworkingbob.log'
+pidfile='./tmp/hardworkingbob.pid'
 
 case $1 in
   start)
     echo 'starting service...' >> "$logfile"
-    bundle exec bin/basil &>> "$logfile" &
+    bundle exec bin/hardworkingbob &>> "$logfile" &
     echo $! > "$pidfile"
 
     if ps $! &>/dev/null; then
-      echo "basil started with pid $!"
+      echo "hardworkingbob started with pid $!"
     else
       echo "something went wrong" >&2
       exit 1

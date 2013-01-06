@@ -1,6 +1,6 @@
-# Basil's identity; how he knows a message is directed to him in group
+# Bob's identity; how he knows a message is directed to him in group
 # chats. Messages must be prefixed using "@me ", "me, " or similar.
-me: basil
+me: bob
 
 # Cli or Skype?
 server_type: :cli
@@ -11,56 +11,8 @@ dispatcher_type: :simple
 # The directory from which plugins are loaded.
 plugins_directory: ./plugins
 
-# Where basil will persist his data.
-pstore_file: ./basil.pstore
+# Where bob will persist his data.
+pstore_file: ./hardworkingbob.pstore
 
 # Where a locking server will store its lock file.
-lock_file: /tmp/basil.lock
-
-# Required only on OSX and ruby 1.9 for https requests to work (JIRA).
-# Install curl-ca-bundle via ports. The get_* utilities will use this
-# cert file for secure requests if the configuration option is present.
-# This may not be a requirement forever, so try without first.
-#https_cert_file: /opt/local/share/curl/curl-ca-bundle.crt
-
-#########################################################################
-# Additional configuration specific to plugins.
-#########################################################################
-
-jenkins:
-  host:     jenkins.example.com
-  port:     80
-  user:     X
-  password: X
-  broadcast_chat: "Name of chat to hear about broken builds"
-
-jira:
-  host:     jira.example.com
-  port:     443
-  user:     X
-  password: X
-
-confluence:
-  host:     confluence.example.com
-  port:     443
-  user:     X
-  password: X
-
-airbrake:
-  account: some_name
-  project: some_number   # https://some_name.airbrakeapp.com/<project>/errors
-  token:   some_log_hash # available in airbrake admin settings
-
-email:
-  interval: 30 # seconds
-  server:   imap.example.com
-  port:     993
-  username: X
-  password: X
-  inbox:    INBOX
-
-twitter:
-  consumer_key:       xxx
-  consumer_secret:    xxx
-  oauth_token:        xxx
-  oauth_token_secret: xxx
+lock_file: /tmp/hardworkingbob.lock

@@ -1,8 +1,8 @@
 require 'singleton'
 require 'yaml'
 
-module Basil
-  # Configuration is lazy-loaded from ./config/basil.yml. You can create
+module HardworkingBob
+  # Configuration is lazy-loaded from ./config/config.yml. You can create
   # one from the provided example. Note: this location may change in the
   # future.
   class Config
@@ -33,7 +33,7 @@ module Basil
     def yaml
       return {} if @hidden
 
-      @yaml ||= YAML::load(File.read('config/basil.yml'))
+      @yaml ||= YAML::load(File.read('config/config.yml'))
     end
 
     # We need to temporarily hide the Config object during evaluation

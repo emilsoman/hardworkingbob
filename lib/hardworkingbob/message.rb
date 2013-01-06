@@ -1,4 +1,4 @@
-module Basil
+module HardworkingBob
   # The main basil data type: the Message. Servers should construct
   # these and pass them through dispatch which will also return a
   # Message if a response is triggered.

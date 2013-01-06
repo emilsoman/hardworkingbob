@@ -1,4 +1,4 @@
-module Basil
+module HardworkingBob
   class Cli < Server
     has_command(:quit) do |*args|
       exit 0

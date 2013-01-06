@@ -1,13 +1,13 @@
 require 'rype'
 
-module Basil
+module HardworkingBob
   class Skype < Server
     def start
       info "starting skype server"
 
       super
 
-      Rype::Logger.set(Basil::Logger)
+      Rype::Logger.set(HardworkingBob::Logger)
 
       # Note: there are a number of oddities in how the dbus connection
       # behaves. Also, if you break this code by violating the below,

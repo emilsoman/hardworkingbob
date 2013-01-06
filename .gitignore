@@ -2,3 +2,6 @@ pkg
 doc
 coverage
 *.pstore
+config/config.yml
+Skype*/*
+tags

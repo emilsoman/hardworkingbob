@@ -1,4 +1,4 @@
-module Basil
+module HardworkingBob
   class Lock
     class << self
       def guard(&block)

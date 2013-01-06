@@ -1,6 +1,6 @@
 require 'shellwords'
 
-module Basil
+module HardworkingBob
   class Server
     include Logging
 
@@ -36,11 +36,10 @@ module Basil
       end
     end
 
-    # Loads plugins and kicks off the email checking loop. Subclasses
+    # Initializes Dispatcher which loads plugins. Subclasses
     # should call super in their start method overrides.
     def start
-      Plugin.load!
-      Email.check
+      @dispatcher = Dispatch.new
     end
 
     def dispatch_message(msg)
@@ -52,11 +51,7 @@ module Basil
         return reply
       end
 
-      if Config.dispatcher_type == :extended
-        Dispatch.extended(msg)
-      else
-        Dispatch.simple(msg)
-      end
+      @dispatcher.dispatch_message(msg)
 
     rescue => ex
       error "#{ex}"
