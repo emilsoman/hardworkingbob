@@ -1,21 +1,16 @@
-# Basil - */'ba-zəl/*
+# HardworkingBob
 
-A skype bot.
+A hardworking guy who listens to whatever the heck you say on skype
+
+This was a fork of [basil](https://github.com/pbrisbin/basil) , but then I wanted the plugin framework to change,
+and I wanted to remove some default email sending stuff from the bot's code.
 
 ## Getting started
 
 ~~~ { .bash }
-git clone https://github.com/pbrisbin/basil
-cd basil
-cp config/example.yml config/basil.yml
+git clone https://github.com/emilsoman/hardworkingbob.git
+cd hardworkingbob
+cp config/example.yml config/config.yml
 bundle install
-bundle exec bin/basil
+bundle exec bin/hardworkingbob
 ~~~
-
-You can also use `rake install` to install basil like any other gem. 
-However, he (currently) expects various support files to be in the 
-directory where you run him.
-
-For additional info, please browse the [wiki][].
-
-[wiki]: https://github.com/pbrisbin/basil/wiki
